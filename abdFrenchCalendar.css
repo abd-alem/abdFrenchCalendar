@@ -1,0 +1,81 @@
+abd-french-calendar {
+  margin: 25px 0;
+  width: 250px;
+}
+
+abd-french-calendar .calendar-header {
+  margin-bottom: 15px;
+}
+
+abd-french-calendar .calendar-header>md-icon {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  border: none;
+  border-radius: 12px;
+  color: #58595B;
+  background: #f1f2f2;
+  cursor: pointer;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+abd-french-calendar .calendar-header>md-icon:hover {
+  color: #f1f2f2;
+  background: #3da599;
+}
+
+abd-french-calendar .calendar-header>div {
+  background: linear-gradient(141deg, #9ed2cc 0%, #3da599 51%, #63b7ad 75%);
+  background: -webkit-linear-gradient(141deg, #9ed2cc 0%, #3da599 51%, #63b7ad 75%);
+  background: -moz-linear-gradient(141deg, #9ed2cc 0%, #3da599 51%, #63b7ad 75%);
+  background: -o-linear-gradient(141deg, #9ed2cc 0%, #3da599 51%, #63b7ad 75%);
+  color: white;
+  width: 110px;
+  height: 110px;
+  border-radius: 55px;
+}
+
+abd-french-calendar .calendar-header>div span {
+  color: white;
+}
+
+abd-french-calendar .calendar-header>div>span:first-child {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+abd-french-calendar .calendar-header>div>span:last-child {
+  font-weight: 400;
+}
+
+abd-french-calendar .calendar-weekdays>span, abd-french-calendar .calendar-weeks>span {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+abd-french-calendar .calendar-weekdays {
+  margin: 30px 0 10px;
+}
+
+abd-french-calendar .calendar-weekdays>span {
+  color: #58595B;
+}
+
+abd-french-calendar .calendar-weeks>.enabled:hover {
+  background: rgb(146, 146, 146) !important;
+  color: #f1f2f2 !important;
+}
+
+@media screen and (max-width: 599px) {
+  abd-french-calendar .calendar-header>span {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: Roboto-Regular;
+  }
+
+  abd-french-calendar {
+    margin-bottom: 0;
+  }
+}

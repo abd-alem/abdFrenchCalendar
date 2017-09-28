@@ -1,0 +1,17 @@
+<div class="calendar-header" layout layout-align="center end" layout-align-xs="space-around center">
+  <md-icon ng-click="ctrl.previousMonth()">navigate_before</md-icon>
+  <div class="" layout="column" layout-align="center center" ng-if="ctrl.$mdMedia('gt-xs')">
+    <span>{{ctrl.months[ctrl.currentMonth.month()]}}</span>
+    <span>{{ctrl.currentMonth.year()}}</span>
+  </div>
+  <span ng-if="ctrl.$mdMedia('xs')">{{ctrl.months[ctrl.currentMonth.month()]}} {{ctrl.currentMonth.year()}}</span>
+  <md-icon ng-click="ctrl.nextMonth()">navigate_next</md-icon>
+</div>
+
+<div layout class="calendar-weekdays">
+  <span ng-repeat="day in ctrl.weekdays" flex>{{day}}</span>
+</div>
+
+<div layout class="calendar-weeks" ng-repeat="week in ctrl.weeks">
+  <span ng-repeat="day in week.days" ng-style="ctrl.stylizeDay(day)" ng-class="{'enabled': !day.isDisabled && day.isCurMonth}" layout layout-align="center center" flex ng-click="ctrl.selectDate(day)">{{day.number}}</span>
+</div>
